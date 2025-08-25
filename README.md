@@ -98,6 +98,7 @@ Error 4872 MsMpEng
 
 ## DEVELOPMENT
 - Not really going to happen, but heres the potential plans... 
+1. Merge Disable Satan Inside into AntiMsVirus10-11, like AntiMsVirus8-81 (will be if not done).
 1. Options to delete the defender folder, after setting the defender folder permission (is this safe?).
 2. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
 3. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
