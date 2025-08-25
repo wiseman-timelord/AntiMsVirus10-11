@@ -1,4 +1,4 @@
-# AntiMsVirus-10/11
+# AntiMsVirus10-11
 
 ### STATUS: WORKING
 - This program is able to disable the Microsoft Anti-Virus, however, due to development issues it was not tested in Safe Mode until later, it, is COMPLETE OVERKILL and does the task 10 times over, though thats nice too B).  
