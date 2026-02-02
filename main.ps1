@@ -150,34 +150,42 @@ function Run-EnableHacks {
     Write-Host ""
     Write-Host "Running 1. Disable Tamper Protection..."
     Run-DisableTamperProtection
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Running 2. Registry Edits..."
     Disable-DefenderRegistry
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Running 3. Disable Services & Drivers..."
     Disable-DefenderServicesAndDrivers
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Running 4. Defender Folder Ownership..."
     Change-DefenderFolderOwnership
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Running 5. Disable Scheduled Tasks..."
     Disable-DefenderScheduledTasks
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Running 6. Process Scans & Terminate..."
     Run-ProcessScans
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Running 7. Disable Defender Features..."
     Run-DisableDefenderFeatures
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Running 8. Disable Satan Inside Services..."
     Disable-SatanServices
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     $Global:BatchMode = $false
@@ -207,18 +215,22 @@ function Run-RestoreDefault {
 
     Write-Host "Restoring 1. Registry keys..."
     Restore-DefenderRegistry
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Restoring 2. Defender Services & Drivers..."
     Restore-DefenderServices
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Restoring 3. Scheduled Tasks..."
     Restore-DefenderScheduledTasks
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     Write-Host "Restoring 4. Satan Inside Services..."
     Enable-SatanServices
+    Start-Sleep -Seconds 2
     Write-Host ""
 
     $Global:BatchMode = $false
