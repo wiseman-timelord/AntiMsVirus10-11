@@ -23,28 +23,28 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
 ### PREVIEW
 - Its no small task to remove a virus (v1.02)...
 ```
-               _    __  ____     __
-              / \  |  \/  \ \   / /
-       _____ / _ \_| |\/| |\ \_/ /____
-      |_____/ ___ \| |__| |_\ V /_____|
-           /_/   \_\_|  |_|  \_/
-===============( AntiMsVirus )===============
+===============================================================================
+    Anti-MsVirus 10-11: Main Menu
+===============================================================================
 
-    1. Disable Tamper Protection
 
-    2. Registry Edits (requires restart)
+    1. Disable Tamper Protection     [compat check -> confirm -> execute]
 
-    3. Disable Services (requires restart)
+    2. Registry Edits                [compat check -> confirm -> per-key with verify]
 
-    4. Defender Folder Ownership
+    3. Disable Services & Drivers    [compat check -> confirm -> per-item + MDCoreSvc]
 
-    5. Disable Defender Scheduled Tasks
+    4. Defender Folder Ownership     [compat check -> confirm -> takeown + icacls]
 
-    6. Run Process Scans & Terminate
+    5. Disable Scheduled Tasks       [compat check -> confirm -> per-task]
 
-    7. Disable Defender Features
+    6. Process Scans & Terminate     [compat check -> confirm -> 2 passes]
 
-Select, Menu Options=1-7, Exit Program=X:
+    7. Disable Defender Features     [compat check -> confirm -> Set-MpPreference]
+
+
+===============================================================================
+Selection; Options = 1-7, Enable Hacks = E, Restore Default = R, Exit = X:
 
 ```
 - And here we see it in operation (v1.02)...
@@ -91,7 +91,7 @@ Error 4872 MsMpEng
 - Administrator privileges.
 
 ### USAGE
-Its never been easier to break your Operating System, here lemme explain the procedure...
+Its never been easier to break your Operating System! Darn your still here, ok then lemme explain the procedure...
 - Ensure you have already tried programs such as, `DoNotSpy` and `0&0 Shut Up` and `Windows Privacy Tweaker` and `xp-AntiSpy`, first; these programs, may cover the issue you have.
 1. Create a restore point, this may be useful later if experiencing issues, so you can revert changes.
 2. Boot into Safe Mode for best results — type "safe mode" into the start menu. The program works in normal mode for some operations but will warn you where safe mode is needed.
