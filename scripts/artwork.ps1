@@ -1,22 +1,34 @@
-# Script: artwork.ps1
+# Script: scripts\artwork.ps1
 
-# Function Show Asciiart
+# Function Show-AsciiArt
 function Show-AsciiArt {
     $asciiArt = @"
-               _    __  ____     __    
-              / \  |  \/  \ \   / /    
-       _____ / _ \_| |\/| |\ \_/ /____ 
+               _    __  ____     __
+              / \  |  \/  \ \   / /
+       _____ / _ \_| |\/| |\ \_/ /____
       |_____/ ___ \| |__| |_\ V /_____|
-           /_/   \_\_|  |_|  \_/          
+           /_/   \_\_|  |_|  \_/
 ===============( AntiMsVirus )===============
 "@
     Write-Host $asciiArt
 }
 
-# Function Show Header
+# Function Show-Header
 function Show-Header {
-    $asciiArt = @"
-`n===============( AntiMsVirus )===============`n`n
+    $header = @"
+
+===============( AntiMsVirus )===============
+
 "@
-    Write-Host $asciiArt
+    Write-Host $header
+}
+
+# Function Show-SatanHeader
+function Show-SatanHeader {
+    $header = @"
+
+========( Disable Satan Inside )========
+
+"@
+    Write-Host $header
 }
