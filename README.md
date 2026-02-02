@@ -103,7 +103,9 @@ Its never been easier to break your Operating System, here lemme explain the pro
 ### NOTATION
 - This is a program you probably want to use AFTER, you have setup all the stuff known to be sentitive, such as installing, WSL2 or things requiring MS Store, definately do that FIRST.
 - DisableSatanInside-10 has been merged into this program and is no longer a separate project.
+- You should also know and understand ALL of the things that this program is capable of disabling/breadking, as there will be consequences later. You may NOT want to enable all the hacks.
 
 ### DISCLAIMER
-- You should not use this program unless you do not mind breaking the relating services, however there is the possibility the Restore Default option (R) will undo changes later, but I will not be testing the undo!!! You have been warned, if that part doesnt work, its because the disabling it part probably did do its job.
-- You should also know and understand ALL of the things that this program is capable of disabling/breadking, as there will be consequences later. You may NOT want to enable all the hacks.
+- You should not use this program unless you do not mind breaking the relating services, however there is the possibility the Restore Default option (R) will undo changes later, but I will not be testing the undo!!! You have been warned, if that part doesnt work, its because the disabling it part probably did do its job. 
+- If the undo does not work, then there likely is no program to fix what this program breaks, other than reinstalling the OS, or some kind of system restore but restore may not work also. 
+- If you cannot reinstall your own OS, then you should NOT be using this program, its strictly for Geeks whom like to take a risk for a little bit of, freedom and piece of mind.
