@@ -107,5 +107,5 @@ Its never been easier to break your Operating System, here lemme explain the pro
 
 ### DISCLAIMER
 - You should not use this program unless you do not mind breaking the relating services, however there is the possibility the Restore Default option (R) will undo changes later, but I will not be testing the undo!!! You have been warned, if that part doesnt work, its because the disabling it part probably did do its job. 
-- If the undo does not work, then there likely is no program to fix what this program breaks, other than reinstalling the OS, or some kind of system restore but restore may not work also. 
-- If you cannot reinstall your own OS, then you should NOT be using this program, its strictly for Geeks whom like to take a risk for a little bit of, freedom and piece of mind.
+- If the undo does not work, then there likely is no program to fix what this program breaks, other than reinstalling the OS, or some kind of system restore but restore may not work to cover all the files. This program modifies core windows configurations. 
+- If you cannot reinstall your own OS/apps, then you should NOT be using this program, its strictly for Geeks whom like to take a risk for a little bit of, freedom and piece of mind, to have those processes, that so called "paranoid" people, do go on about, to be disabled/deleted, by any means necessary.
