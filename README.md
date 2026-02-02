@@ -21,7 +21,7 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
 - **Visual Elements**: Incorporates ASCII art for a more engaging user experience.
 
 ### PREVIEW
-- Its no small task to remove a virus (v1.02)...
+- Its no small task to remove a virus (v1.05)...
 ```
 ===============================================================================
     Anti-MsVirus 10-11: Main Menu
