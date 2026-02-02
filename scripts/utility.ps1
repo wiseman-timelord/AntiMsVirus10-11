@@ -506,7 +506,7 @@ function Restore-DefenderServices {
     $successCount = 0
     $failCount = 0
 
-    # Services — default is Automatic (Start=2)
+    # Services - default is Automatic (Start=2)
     foreach ($svcName in $lists.Services) {
         Write-Host "..Restoring service: $svcName"
         try {
@@ -532,7 +532,7 @@ function Restore-DefenderServices {
         }
     }
 
-    # Drivers — default is Boot Start (Start=0) for wdboot, System (Start=1) for others
+    # Drivers - default is Boot Start (Start=0) for wdboot, System (Start=1) for others
     foreach ($drvName in $lists.Drivers) {
         Write-Host "..Restoring driver: $drvName"
         $defaultStart = if ($drvName -eq "wdboot") { 0 } else { 1 }

@@ -1,5 +1,5 @@
 @echo off
-mode 50,25
+REM mode 50,25
 echo.
 echo Batch Launcher Started....
 echo.

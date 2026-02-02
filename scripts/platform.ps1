@@ -43,15 +43,15 @@ function Get-WindowsVersionInfo {
 
     # Detect Defender platform version
     # This determines which features are available. Key boundary:
-    #   4.18.2007.8 (Aug 2020) — DisableAntiSpyware deprecated
-    #   4.18.23110.x (Nov 2023) — MDCoreSvc introduced
+    #   4.18.2007.8 (Aug 2020) - DisableAntiSpyware deprecated
+    #   4.18.23110.x (Nov 2023) - MDCoreSvc introduced
     $defenderPlatform = $null
     $defenderPlatformMajor = 0
     try {
         $mpStatus = Get-MpComputerStatus -ErrorAction SilentlyContinue
         if ($mpStatus -and $mpStatus.AMProductVersion) {
             $defenderPlatform = $mpStatus.AMProductVersion
-            # Parse e.g. "4.18.2007.8" — we use the third segment for comparison
+            # Parse e.g. "4.18.2007.8" - we use the third segment for comparison
             $segments = $defenderPlatform.Split(".")
             if ($segments.Count -ge 3) {
                 $defenderPlatformMajor = [int]$segments[2]
@@ -60,9 +60,9 @@ function Get-WindowsVersionInfo {
     } catch {}
 
     # Win10 sub-classification based on Defender platform:
-    #   "Early"  — platform < 2007 (pre Aug 2020). DisableAntiSpyware works.
+    #   "Early"  - platform < 2007 (pre Aug 2020). DisableAntiSpyware works.
     #              Tamper protection exists but less aggressive.
-    #   "Modern" — platform >= 2007 (post Aug 2020, includes all patched 22H2).
+    #   "Modern" - platform >= 2007 (post Aug 2020, includes all patched 22H2).
     #              DisableAntiSpyware deprecated/ignored.
     #              MDCoreSvc present if platform >= 23110.
     $win10Tier = "Modern"
@@ -99,13 +99,13 @@ function Get-WindowsVersionInfo {
 #   "ineffective" - OS ignores or actively reverts this change
 #
 # Win10 Early (platform < 4.18.2007.8, pre Aug 2020):
-#   Rare now — only machines that haven't received Defender platform
+#   Rare now - only machines that haven't received Defender platform
 #   updates since 2020. DisableAntiSpyware still works. Tamper
 #   protection exists but less strict. No MDCoreSvc.
 #
 # Win10 Modern (platform >= 4.18.2007.8):
 #   Includes all patched 22H2 builds (19045.2311 through 19045.6812+).
-#   DisableAntiSpyware deprecated — key is ignored on consumer editions.
+#   DisableAntiSpyware deprecated - key is ignored on consumer editions.
 #   Tamper protection on by default, guards registry and services.
 #   MDCoreSvc present on platform >= 4.18.23110 (Nov 2023+).
 #   Safe mode required for service/driver/process changes.
@@ -126,9 +126,9 @@ function Get-HackCompatibility {
 
     # Build Win10 notes with sub-version context
     $regWin10Note = if ($tier -eq "Early") {
-        "Early platform — DisableAntiSpyware still honoured. RT Protection keys also applied."
+        "Early platform - DisableAntiSpyware still honoured. RT Protection keys also applied."
     } else {
-        "Modern platform — DisableAntiSpyware deprecated (skipped). RT Protection keys applied as best-effort."
+        "Modern platform - DisableAntiSpyware deprecated (skipped). RT Protection keys applied as best-effort."
     }
     $regWin10Status = if ($tier -eq "Early") { "safemode" } else { "limited" }
 
@@ -232,13 +232,13 @@ function Show-CompatWarning {
         Write-Host "  WARNING: Best results require Safe Mode. You are NOT in Safe Mode." -ForegroundColor Red
     }
 
-    # Win11 or Win10 Modern registry — DisableAntiSpyware skipped
+    # Win11 or Win10 Modern registry - DisableAntiSpyware skipped
     if ($HackName -eq "Registry") {
         if ($VersionInfo.OsMajor -ge 11) {
             Write-Host "  Main registry key (DisableAntiSpyware) will be skipped on Win11." -ForegroundColor Red
             Write-Host "  RT Protection keys will still be applied as best-effort." -ForegroundColor Yellow
         } elseif ($VersionInfo.Win10Tier -eq "Modern") {
-            Write-Host "  DisableAntiSpyware deprecated on modern platforms — will be skipped." -ForegroundColor Red
+            Write-Host "  DisableAntiSpyware deprecated on modern platforms - will be skipped." -ForegroundColor Red
             Write-Host "  RT Protection keys will still be applied as best-effort." -ForegroundColor Yellow
         }
     }
@@ -316,17 +316,17 @@ function Get-DefenderRegistryEntries {
     $defPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender"
     $rtpPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection"
 
-    # DisableAntiSpyware — Win10 Early only (pre platform 4.18.2007.8)
+    # DisableAntiSpyware - Win10 Early only (pre platform 4.18.2007.8)
     if ($VersionInfo.OsMajor -le 10 -and $VersionInfo.Win10Tier -eq "Early") {
         $entries += @{
             Path  = $defPath
             Name  = "DisableAntiSpyware"
             Value = 1
-            Note  = "Early platform — key still honoured"
+            Note  = "Early platform - key still honoured"
         }
     }
 
-    # Real-Time Protection keys — all versions, best-effort
+    # Real-Time Protection keys - all versions, best-effort
     $entries += @(
         @{ Path = $rtpPath; Name = "DisableBehaviorMonitoring";    Value = 1; Note = "Disable behavior monitoring" }
         @{ Path = $rtpPath; Name = "DisableOnAccessProtection";    Value = 1; Note = "Disable on-access file protection" }
@@ -334,7 +334,7 @@ function Get-DefenderRegistryEntries {
         @{ Path = $rtpPath; Name = "DisableRealtimeMonitoring";    Value = 1; Note = "Disable realtime monitoring" }
     )
 
-    # Additional policy keys — all versions
+    # Additional policy keys - all versions
     $entries += @(
         @{ Path = $defPath; Name = "DisableAntiVirus";            Value = 1; Note = "Disable antivirus component" }
         @{ Path = $defPath; Name = "DisableRoutinelyTakingAction"; Value = 1; Note = "Disable automatic threat actions" }
