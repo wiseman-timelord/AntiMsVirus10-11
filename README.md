@@ -91,7 +91,7 @@ Error 4872 MsMpEng
 - Administrator privileges.
 
 ### USAGE
-You should not use this program unless you do not mind breaking the relating services, however there is the possibility the Restore Default option (R) will undo changes later, but I will not be testing the undo!!! You have been warned. And with that said...
+Its never been easier to break your Operating System, here lemme explain the procedure...
 1. Create a restore point, this may be useful later if experiencing issues, so you can revert changes.
 2. Boot into Safe Mode for best results — type "safe mode" into the start menu. The program works in normal mode for some operations but will warn you where safe mode is needed.
 3. Run the batch `AntiMsVirus.Bat` with Admin rights.
@@ -101,5 +101,9 @@ You should not use this program unless you do not mind breaking the relating ser
 7. Utilize your choice of Security software on the computer, I advise passive protection ran monthly.
 
 ### NOTATION
-- After applying all the hacks in, normal and safe, modes, NO I did not break my computer or suffer any OS issues, so consider it safe. The Restore Default option (R) is now included to reverse changes, though a system restore point is still recommended before use.
-- DisableSatanInside-10 has been merged into this program and is no longer a separate project. Its service disable/enable functionality is available via the E (Enable Hacks) and R (Restore Default) menu options.
+- This is a program you probably want to use AFTER, you have setup all the stuff known to be sentitive, such as installing, WSL2 or things requiring MS Store, definately do that FIRST.
+- DisableSatanInside-10 has been merged into this program and is no longer a separate project.
+
+### DISCLAIMER
+- You should not use this program unless you do not mind breaking the relating services, however there is the possibility the Restore Default option (R) will undo changes later, but I will not be testing the undo!!! You have been warned, if that part doesnt work, its because the disabling it part probably did do its job.
+- You should also know and understand ALL of the things that this program is capable of disabling/breadking, as there will be consequences later. You may NOT want to enable all the hacks.
