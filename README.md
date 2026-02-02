@@ -92,6 +92,7 @@ Error 4872 MsMpEng
 
 ### USAGE
 Its never been easier to break your Operating System, here lemme explain the procedure...
+- Ensure you have already tried programs such as, `DoNotSpy` and `0&0 Shut Up` and `Windows Privacy Tweaker` and `xp-AntiSpy`, first; these programs, may cover the issue you have.
 1. Create a restore point, this may be useful later if experiencing issues, so you can revert changes.
 2. Boot into Safe Mode for best results — type "safe mode" into the start menu. The program works in normal mode for some operations but will warn you where safe mode is needed.
 3. Run the batch `AntiMsVirus.Bat` with Admin rights.
@@ -101,6 +102,7 @@ Its never been easier to break your Operating System, here lemme explain the pro
 7. Utilize your choice of Security software on the computer, I advise passive protection ran monthly.
 
 ### NOTATION
+- Programs such as, `DoNotSpy` and `0&0 Shut Up` and `Windows Privacy Tweaker` and `xp-AntiSpy`, are better quality, but will not achive same things, this is why I ended up making AntiMsVirus.
 - This is a program you probably want to use AFTER, you have setup all the stuff known to be sentitive, such as installing, WSL2 or things requiring MS Store, definately do that FIRST.
 - DisableSatanInside-10 has been merged into this program and is no longer a separate project.
 - You should also know and understand ALL of the things that this program is capable of disabling/breadking, as there will be consequences later. You may NOT want to enable all the hacks.
